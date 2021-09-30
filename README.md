@@ -14,6 +14,8 @@ authorAvatar: 'https://avatars1.githubusercontent.com/u/13742415?s=200&v=4'
 
 Este repositório contém o código fonte do Live Coding da DIO no dia 29/07/2021. Neste projeto vamos criar uma infraestrutra em nuvem AWS com API Gateway, DynamoDB, AWS Lambda e AWS CloudFormation utilizando o framework Serverless para o desenvolvimento baseada em Infraestrutura as a Code.
 
+![Lambda Architecture: Serverless Framework, AWS CloudFormation, AWS API Gateway, AWS Lambda, AWS DynamoDB](./lambda-architecture.png)
+
 ## Etapas
 
 Pré requisitos: 
