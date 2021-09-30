@@ -2,6 +2,7 @@
 
 const AWS = require("aws-sdk")
 
+/** @type {import('aws-lambda').APIGatewayProxyHandler} */
 const updateItem = async (event) => {
 
   const {itemStatus} = JSON.parse(event.body);

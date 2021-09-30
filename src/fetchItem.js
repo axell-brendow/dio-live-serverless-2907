@@ -1,6 +1,7 @@
 "use strict";
 const AWS = require("aws-sdk");
 
+/** @type {import('aws-lambda').APIGatewayProxyHandler} */
 const fetchItem = async (event) => {
   //module.exports.fetchItem = async (event) => {
 

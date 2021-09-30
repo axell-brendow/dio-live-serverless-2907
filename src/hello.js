@@ -1,5 +1,6 @@
 "use strict";
 
+/** @type {import('aws-lambda').APIGatewayProxyHandler} */
 const hello = async (event) => {
 //module.exports.hello = async (event) => {
   return {
