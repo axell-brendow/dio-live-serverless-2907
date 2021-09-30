@@ -2,9 +2,7 @@
 const AWS = require("aws-sdk");
 
 /** @type {import('aws-lambda').APIGatewayProxyHandler} */
-const fetchItems = async (event) => {
-  //module.exports.fetchItems = async (event) => {
-
+module.exports.handler = async (event) => {
     const dynamodb = new AWS.DynamoDB.DocumentClient();
 
     let items;
@@ -24,8 +22,4 @@ const fetchItems = async (event) => {
         statusCode: 200,
         body: JSON.stringify(items),
     };
-};
-
-module.exports = {
-    handler: fetchItems,
 };

@@ -1,20 +1,19 @@
 "use strict";
+
 const AWS = require("aws-sdk");
 
 /** @type {import('aws-lambda').APIGatewayProxyHandler} */
-const fetchItem = async (event) => {
-  //module.exports.fetchItem = async (event) => {
-
+module.exports.handler = async (event) => {
     const dynamodb = new AWS.DynamoDB.DocumentClient();
 
-    const {id} = event.pathParameters
+    const { id } = event.pathParameters
 
     let item;
 
     try {
         const result = await dynamodb.get({
             TableName: "ItemTable",
-            Key: {id}
+            Key: { id }
         }).promise();
 
         item = result.Item;
@@ -27,8 +26,4 @@ const fetchItem = async (event) => {
         statusCode: 200,
         body: JSON.stringify(item),
     };
-};
-
-module.exports = {
-    handler: fetchItem,
 };
