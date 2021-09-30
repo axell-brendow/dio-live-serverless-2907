@@ -140,4 +140,34 @@ resources:
           method: put
   ```
 
+## Calling each lambda
 
+### Fetching all items
+
+```sh
+curl https://n3qc9suooi.execute-api.us-east-1.amazonaws.com/dev/items | json_pp
+```
+
+### Fetching one item
+
+```sh
+curl https://n3qc9suooi.execute-api.us-east-1.amazonaws.com/dev/items/a024a13b-206f-41e3-a127-f615ccb2af1a | json_pp
+```
+
+### Creating an item
+
+```sh
+curl https://n3qc9suooi.execute-api.us-east-1.amazonaws.com/dev/items \
+    -X POST \
+    -H "Content-Type: application/json" \
+    -d '{ "item": "Keyboard" }' | json_pp
+```
+
+### Updating an item
+
+```sh
+curl https://n3qc9suooi.execute-api.us-east-1.amazonaws.com/dev/items/a024a13b-206f-41e3-a127-f615ccb2af1a \
+    -X PUT \
+    -H "Content-Type: application/json" \
+    -d '{ "itemStatus": true }' | json_pp
+```
